@@ -7,4 +7,6 @@
     <string name="scan_error">尼玛扫不粗来啊！！！大侠请重来！！！</string>
     <string name="identifying_product">等我撸一下……</string>
     <string name="getting_cmt">原来大家都在吐嘈%s!！！</string>
+    <string name="scan_code">扫描条形码</string>
+    <string name="scan_object">居然还可以扫描实物！！！</string>
 </resources>

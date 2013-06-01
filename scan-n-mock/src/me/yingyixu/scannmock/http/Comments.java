@@ -20,4 +20,11 @@ public class Comments {
         ScanNMockClient.get("comment/query", params, responseHandler);
     }
 
+    public static void getNews(String product, int page, AsyncHttpResponseHandler responseHandler) {
+        RequestParams params = new RequestParams();
+        params.put("q", product);
+        params.put("page", String.valueOf(page));
+        ScanNMockClient.get("news/query", params, responseHandler);
+    }
+
 }
