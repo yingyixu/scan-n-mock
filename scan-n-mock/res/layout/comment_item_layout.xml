@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dip" >
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tv_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img_avatar"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@+id/tv_time"
+        android:layout_toRightOf="@id/img_avatar"
+        android:singleLine="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_nick"
+        android:singleLine="true"
+        android:textColor="#808080" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_nick"
+        android:layout_below="@id/tv_nick"
+        android:layout_marginTop="5dip" />
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_alignLeft="@id/tv_content"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="5dip"
+        android:contentDescription="@null"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_content"
+        android:layout_below="@id/iv_pic"
+        android:layout_marginTop="5dip"
+        android:textColor="#808080" />
+
+</RelativeLayout>

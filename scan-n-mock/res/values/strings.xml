@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ScanNMock</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="scan_error">尼玛扫不粗来啊！！！大侠请重来！！！</string>
+    <string name="identifying_product">等我撸一下……</string>
+    <string name="getting_cmt">原来大家都在吐嘈%s!！！</string>
+</resources>
