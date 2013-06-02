@@ -15,6 +15,8 @@ import me.yingyixu.scannmock.types.News;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -141,8 +143,11 @@ class NewsAdapter extends BaseAdapter {
 
     private LayoutInflater mInflater;
 
+    private Context mContext;
+
     public NewsAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
+        mContext = context;
     }
 
     private ArrayList<News> newsList = new ArrayList<News>();
@@ -204,7 +209,7 @@ class NewsAdapter extends BaseAdapter {
             root = holder;
         }
 
-        public void bindNews(News news) {
+        public void bindNews(final News news) {
             title.setText(news.title);
             source.setText(news.source);
 
@@ -212,6 +217,11 @@ class NewsAdapter extends BaseAdapter {
 
                 @Override
                 public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setAction("android.intent.action.VIEW");
+                    Uri content_url = Uri.parse(news.href);
+                    intent.setData(content_url);
+                    mContext.startActivity(intent);
                 }
             });
         }

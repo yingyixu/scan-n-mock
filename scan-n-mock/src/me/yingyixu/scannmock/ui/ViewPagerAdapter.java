@@ -15,8 +15,16 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     private NewsTab newsTab;
 
+    private ImgTab imgTab;
+
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
+    }
+
+    private boolean isIMG = false;
+
+    public void setIsImg(boolean is) {
+        isIMG = is;
     }
 
     @Override
@@ -24,10 +32,17 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         switch (arg0) {
 
             case 0:
-                if (productTab == null) {
-                    productTab = new ProductTab();
+                if (isIMG) {
+                    if (imgTab == null) {
+                        imgTab = new ImgTab();
+                    }
+                    return imgTab;
+                } else {
+                    if (productTab == null) {
+                        productTab = new ProductTab();
+                    }
+                    return productTab;
                 }
-                return productTab;
 
             case 1:
                 if (weiboTab == null) {

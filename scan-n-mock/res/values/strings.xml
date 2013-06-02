@@ -9,4 +9,5 @@
     <string name="getting_cmt">原来大家都在吐嘈%s!！！</string>
     <string name="scan_code">扫描条形码</string>
     <string name="scan_object">居然还可以扫描实物！！！</string>
+    <string name="chinese_search">中文搜索</string>
 </resources>

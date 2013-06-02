@@ -20,6 +20,8 @@ public class InfoActivity extends SherlockFragmentActivity {
 
     public static CommentsResp cResp;
 
+    public static String title;
+
     private ActionBar mActionBar;
 
     private ViewPager mPager;
@@ -31,7 +33,7 @@ public class InfoActivity extends SherlockFragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        setTitle(pResp.product);
+        setTitle(title);
 
         mActionBar = getSupportActionBar();
         mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -66,9 +68,18 @@ public class InfoActivity extends SherlockFragmentActivity {
         };
 
         ActionBar.Tab tab = getSupportActionBar().newTab();
-        tab.setText("Price");
-        tab.setTabListener(tabListener);
-        mActionBar.addTab(tab);
+
+        if (getIntent().getExtras().getInt(MainActivity.KEY_IMG, 0) > 0) {
+            mAdapter.setIsImg(true);
+
+            tab.setText("Images");
+            tab.setTabListener(tabListener);
+            mActionBar.addTab(tab);
+        } else {
+            tab.setText("Price");
+            tab.setTabListener(tabListener);
+            mActionBar.addTab(tab);
+        }
 
         tab = getSupportActionBar().newTab();
         tab.setText("Weibo");

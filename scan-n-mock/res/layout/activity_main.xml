@@ -8,16 +8,24 @@
         android:id="@+id/btn_qrcode"
         android:layout_width="280dip"
         android:layout_height="wrap_content"
-        android:text="@string/scan_code"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:text="@string/scan_code" />
 
     <Button
         android:id="@+id/btn_object"
-        android:text="@string/scan_object"
         android:layout_width="280dip"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_qrcode"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dip" />
+        android:layout_marginTop="10dip"
+        android:text="@string/scan_object" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/btn_object"
+        android:layout_below="@id/btn_object"
+        android:text="@string/chinese_search" />
 
 </RelativeLayout>
